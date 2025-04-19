@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Market</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #0ddb0d;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
+            background: #222;
+            border: 3px solid #0ddb0d;
+            border-radius: 8px;
+            position: relative;
+        }
+        .navbar {
+            padding: 20px;
+            border-bottom: 3px solid #0ddb0d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar a {
+            color: #0ddb0d;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .navbar span {
+            color: rgb(211, 0, 0);
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .listing {
+            padding: 15px;
+            border-bottom: 2px solid #0ddb0d;
+        }
+        .btn {
+            background: none;
+            border: 2px solid #0ddb0d;
+            color: #0ddb0d;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .btn:hover {
+            background: #0ddb0d;
+            color: #222;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 24px;
+            color: rgb(211, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">&larr; Back to Main</a>
+        </div>
+        <h1>Black Market</h1>
+        <p>Explore a wide range of prohibited goods and services.</p>
+        
+        <div class="listing"><h3>Fake IDs</h3><p>High-quality fake identification documents.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Counterfeit Money</h3><p>Premium fake currency for various needs.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Stolen Credit Cards</h3><p>Access cloned credit cards worldwide.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Hacking Services</h3><p>Professional hackers for hire.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Illegal Weapons</h3><p>Firearms, knives, and more.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Drugs</h3><p>All types of illicit substances.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Human Trafficking</h3><p>Underground services.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Explosives</h3><p>High-grade explosive materials.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Spy Equipment</h3><p>Bugging devices, hidden cameras, etc.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Data Leaks</h3><p>Access leaked databases and credentials.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Fake Diplomas</h3><p>Get your fake academic degrees.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Ransomware Tools</h3><p>Advanced malware for ransom attacks.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Dark Web Hosting</h3><p>Anonymous web hosting services.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Anonymous VPNs</h3><p>Untraceable internet access.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Botnets</h3><p>Control thousands of infected devices.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Fake Passports</h3><p>High-quality forged passports.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Organ Trade</h3><p>Black market organ sales.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Money Laundering</h3><p>Convert illicit funds into clean money.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Illegal Gambling</h3><p>Underground betting and casinos.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+        <div class="listing"><h3>Child Exploitation</h3><p>Horrific crimes against humanity.</p><button class="btn" onclick="window.location.href='shoppingcart.html'">View</button></div>
+    </div>
+    <script>
+        function addToCart(itemName) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(itemName);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            window.location.href = 'shoppingcart.html';
+        }
+    </script>
+</body>
+</html>

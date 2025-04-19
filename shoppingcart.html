@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #0ddb0d;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #222;
+            border: 3px solid #0ddb0d;
+            border-radius: 8px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 2px solid #0ddb0d;
+        }
+        .btn {
+            background: none;
+            border: 2px solid #0ddb0d;
+            color: #0ddb0d;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .btn:hover {
+            background: #0ddb0d;
+            color: #222;
+        }
+    </style>
+    <script>
+        let cart = ["1 Item"];
+
+        function addToCart(item) {
+            cart.push(item);
+            renderCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = '';
+            cart.forEach((item, index) => {
+                cartList.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item}</span>
+                        <button class="btn" onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                `;
+            });
+        }
+
+        window.onload = renderCart;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" style="color: #0ddb0d; font-size: 20px;">&larr; Back to Main</a>
+        <h1>Shopping Cart</h1>
+        <div id="cart-list"></div>
+        <button class="btn" onclick="addToCart('1 Item')">Add Item</button>
+    </div>
+</body>
+</html>

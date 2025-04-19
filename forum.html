@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #0ddb0d;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
+            background: #222;
+            border: 3px solid #0ddb0d;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .navbar {
+            padding: 20px;
+            border-bottom: 3px solid #0ddb0d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar a {
+            color: #0ddb0d;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .forum-title {
+            color: rgb(211, 0, 0);
+            font-size: 45px;
+            font-weight: bold;
+            text-align: right;
+            padding-left: 374px;
+
+        }
+        .post {
+            width: 80%;
+            padding: 15px;
+            border-bottom: 2px solid #0ddb0d;
+            text-align: left;
+        }
+        .post h3 {
+            color: rgb(211, 0, 0);
+        }
+        .btn {
+            background: none;
+            border: 2px solid #0ddb0d;
+            color: #0ddb0d;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: 'Orbitron', sans-serif;
+            display: block;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #0ddb0d;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">&larr; Back to Main</a>
+            <span class="forum-title">Dark Web Forum</span>
+        </div>
+        <div class="post">
+            <h3>Anonymous Hacking Techniques</h3>
+            <p>Learn about the latest methods to stay undetected online...</p>
+            <button class="btn" onclick="window.location.href='post1.html'">More...</button>
+        </div>
+        <div class="post">
+            <h3>Cryptocurrency Security</h3>
+            <p>How to keep your digital assets safe from hackers...</p>
+            <button class="btn" onclick="window.location.href='post2.html'">More...</button>
+        </div>
+        <div class="post">
+            <h3>Dark Web Marketplaces</h3>
+            <p>A deep dive into how underground markets operate...</p>
+            <button class="btn" onclick="window.location.href='post3.html'">More...</button>
+        </div>
+        <div class="post">
+            <h3>Privacy Tools</h3>
+            <p>The best software to ensure complete anonymity...</p>
+            <button class="btn" onclick="window.location.href='post4.html'">More...</button>
+        </div>
+    </div>
+</body>
+</html>
